@@ -1,0 +1,3 @@
+form(hx-post="/todos" hx-target="#todos" hx-swap="beforeend"  _="on htmx:afterOnLoad set #txtTodo.value to ''")
+  input(id="txtTodo" type="text" name="title" placeholder="Title" autofocus='')
+  button(type="submit") Add

@@ -1,0 +1,7 @@
+li(id=`todo-${todo.id}`)
+  if todo.completed 
+    strike=todo.title
+  else
+    =todo.title
+  button(hx-delete=`/todos/${todo.id}` _=`on htmx:afterOnLoad remove #todo-${todo.id}`) delete
+  button(hx-patch=`/todos/${todo.id}` hx-target=`#todo-${todo.id}` hx-swap="outerHTML") update

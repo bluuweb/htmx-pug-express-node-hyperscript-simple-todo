@@ -1,0 +1,7 @@
+h1 {
+  color: #2b0060;
+}
+li.htmx-swapping {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}

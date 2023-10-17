@@ -1,0 +1,22 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Pug + HTMX
+    link(rel="stylesheet", href="/main.css")
+    script(
+      src="https://unpkg.com/htmx.org@1.9.6" 
+      integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" 
+      crossorigin="anonymous")
+  body
+    h1 Pug + HTMX 
+    include components/todo-form.pug
+    ul(id="todos")
+      if todos.length > 0
+        each todo in todos 
+          include components/todo-item.pug
+      else 
+        li No todos yet
+    script(src='https://unpkg.com/hyperscript.org@0.0.5')
+    
